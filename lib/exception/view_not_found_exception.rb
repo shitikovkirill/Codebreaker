@@ -1,0 +1,3 @@
+class ViewNotFoundException < Exception
+
+end
