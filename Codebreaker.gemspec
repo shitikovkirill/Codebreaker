@@ -16,13 +16,13 @@ The code-breaker then gets some number of chances to break the code. In each tur
 The code-maker then marks the guess with up to four + and - signs. A + indicates an exact match: one of the numbers in the
 guess is the same as one of the numbers in the secret code and in the same position. A - indicates a number match: one of
 the numbers in the guess is the same as one of the numbers in the secret code but in a different position.}
-  spec.homepage      = "http://webwave.co/"
+  spec.homepage      = "http://WebWave.co/"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
   # to allow pushing to a single host or delete this section to allow pushing to any host.
   if spec.respond_to?(:metadata)
-    spec.metadata['allowed_push_host'] = "TODO: Set to 'http://mygemserver.com'"
+    spec.metadata['allowed_push_host'] = 'http://rubygems.org'
   else
     raise "RubyGems 2.0 or newer is required to protect against public gem pushes."
   end

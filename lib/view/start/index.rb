@@ -1,12 +1,7 @@
-begin
-  puts 'puts 4 number for break code:'
-  number = gets.strip
-  number_valid = (number =~ /^[1-6]{4}$/).nil?
+$view_vars
 
-  if number_valid
-    puts "Not valid number"
-  end
-
-end while number_valid
+puts 'puts 4 number for break code:'
+number = gets.strip
 
 $return_vars = { action: 'checkcode', number: number }
+$return_vars.merge!($view_vars)

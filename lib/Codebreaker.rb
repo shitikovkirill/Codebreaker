@@ -16,7 +16,6 @@ module Codebreaker
       view    = Codebreaker::ViewHelper.new
       router  = Codebreaker::Route.new(view)
 
-      number_of_attempts = 0
       while (input = gets.strip) != 'stop'
         begin
           raise RouteException, 'You introduced illegal characters' until (input =~ %r{^[a-zA-Z]+$})
@@ -38,4 +37,4 @@ module Codebreaker
   end
 end
 
-Codebreaker::Application.new().run
+#Codebreaker::Application.new().run
