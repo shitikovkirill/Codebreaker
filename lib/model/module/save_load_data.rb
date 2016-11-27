@@ -3,11 +3,7 @@ module Codebreaker
 
     module ClassMethods
       def load_data (data_provider)
-        library = data_provider.load_data
-        if(library.nil?)
-          return Library.new
-        end
-        library
+        data_provider.load_data
       end
     end
 

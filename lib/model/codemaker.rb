@@ -18,5 +18,13 @@ module Codebreaker
       number_of_minus = number_of_coincidences - number_of_plus
       '+' * number_of_plus + '-' * number_of_minus
     end
+
+    def valid_input? numbers
+      case numbers
+        when /^[1-6]{4}$/
+          return true
+      end
+      false
+    end
   end
 end

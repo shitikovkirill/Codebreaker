@@ -1,3 +1,0 @@
-class RouteException < Exception
-
-end
