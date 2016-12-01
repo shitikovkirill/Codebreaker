@@ -2,8 +2,8 @@ module Codebreaker
   class Result
     attr_reader :count_attempt, :progress, :code
 
-    def initialize code
-      @count_attempt = 6
+    def initialize code, count_attempt
+      @count_attempt = count_attempt
       @progress = []
       @code = code
     end

@@ -1,10 +1,10 @@
 require 'yaml'
 require_relative 'Codebreaker/version'
-require_relative 'model/data/data'
-require_relative 'model/module/save_load_data'
-require_relative 'model/codemaker'
-require_relative 'model/result'
-require_relative 'model/player'
+require_relative 'Codebreaker/model/data/data'
+require_relative 'Codebreaker/model/module/save_load_data'
+require_relative 'Codebreaker/model/codemaker'
+require_relative 'Codebreaker/model/result'
+require_relative 'Codebreaker/model/player'
 
 module Codebreaker
   class Application
@@ -12,7 +12,7 @@ module Codebreaker
       codemaker = Codemaker.new
       code = codemaker.make_code;
 
-      result = Result.new code
+      result = Result.new code, 6
 
       while (result.has_attempt?)
         puts "You have #{result.attempt} tries to guess the code:"
@@ -36,7 +36,7 @@ module Codebreaker
       name = gets.strip
       player = Player.new(name, result)
 
-      yaml_file_provider = Data::File::YAML.new
+      yaml_file_provider = File.new
       player.save_data(yaml_file_provider);
 
     end
