@@ -1,12 +1,12 @@
 module Codebreaker
   class Player
-    attr_reader :name, :result
+    attr_reader :name, :game
 
     include SaveLoadData
 
-    def initialize(name, result)
+    def initialize(name, game)
       @name = name
-      @result = result
+      @game = game
     end
   end
 end

@@ -3,38 +3,36 @@ require_relative 'Codebreaker/version'
 require_relative 'Codebreaker/model/data/data'
 require_relative 'Codebreaker/model/module/save_load_data'
 require_relative 'Codebreaker/model/codemaker'
-require_relative 'Codebreaker/model/result'
+require_relative 'Codebreaker/model/game'
 require_relative 'Codebreaker/model/player'
+require_relative 'Codebreaker/wrapper/base_wrapper'
+require_relative 'Codebreaker/wrapper/hint_wrapper'
+require_relative 'Codebreaker/wrapper/help_wrapper'
+require_relative 'Codebreaker/wrapper/code_wrapper'
+
 
 module Codebreaker
   class Application
     def run
       codemaker = Codemaker.new
-      code = codemaker.make_code;
 
-      result = Result.new code, 6
+      game = Game.new ({code: codemaker.make_code, count_attempt: 6, count_hint: 1})
 
-      while (result.has_attempt?)
-        puts "You have #{result.attempt} tries to guess the code:"
+      while (game.has_attempt?)
+        puts "You have #{game.attempt} tries to guess the code:"
 
         player_code = gets.strip
 
-        unless codemaker.valid_input?(player_code)
-          puts 'Your enter not correct data'
-          next
-        end
+        result = HelpWrapper.new(HintWrapper.new(CodeWrapper.new(game))).check_code(player_code)
 
-        effect = codemaker.check_code(result.code, player_code)
-        puts 'Your result '+ effect
-
-        result.add_result(effect)
+        puts 'Result: '+ result
       end
 
-      puts result
+      puts game
 
       puts 'Enter your name: '
       name = gets.strip
-      player = Player.new(name, result)
+      player = Player.new(name, game)
 
       yaml_file_provider = File.new
       player.save_data(yaml_file_provider);
