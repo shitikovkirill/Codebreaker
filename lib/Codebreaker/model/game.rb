@@ -24,6 +24,16 @@ module Codebreaker
       @progress.push(result)
     end
 
+    def get_hint
+      if(@count_hint > 0)
+        @count_hint -= 1
+        p index = rand(4)
+        @code[index]
+      else
+        'You can not have hint'
+      end
+    end
+
     def check_code(user_code)
       code = @code
       regexp = Regexp.new('([' + code + '])')
