@@ -4,14 +4,13 @@ describe Codebreaker::BaseWrapper do
 
   it 'should raise exception' do
     expect(Codebreaker::BaseWrapper.new(Object.new)).to raise_error
-    wrapper = Codebreaker::BaseWrapper.new(Codebreaker::Game.new)
+    wrapper = Codebreaker::BaseWrapper.new(Codebreaker::Game.new(''))
     expect(wrapper.check_code('3333'))
   end
 
 
 
   it 'should get game (1 wrapper)'  do
-
     wrapper = Codebreaker::BaseWrapper.new(Codebreaker::Game.new)
     game = wrapper.getGame
 

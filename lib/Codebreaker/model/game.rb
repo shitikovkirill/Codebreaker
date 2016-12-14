@@ -1,5 +1,6 @@
 module Codebreaker
   class Game
+    attr_accessor :code
     attr_reader  :progress, :player_answer
 
     def initialize (settings)

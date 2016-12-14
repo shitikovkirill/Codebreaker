@@ -41,4 +41,4 @@ module Codebreaker
   end
 end
 
-Codebreaker::Application.new().run
+#Codebreaker::Application.new().run
