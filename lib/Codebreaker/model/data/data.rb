@@ -1,6 +1,5 @@
 module Codebreaker
   class File
-
     def initialize(file_name = 'data_file_yaml.yaml')
       @file_name = file_name
     end
@@ -15,6 +14,5 @@ module Codebreaker
         file.puts object.to_yaml
       end
     end
-
   end
 end

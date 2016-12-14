@@ -1,6 +1,5 @@
 module Codebreaker
   module SaveLoadData
-
     module ClassMethods
       def load_data(data_provider)
         data_provider.load_data
@@ -21,5 +20,3 @@ module Codebreaker
     end
   end
 end
-
-

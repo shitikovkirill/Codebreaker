@@ -1,9 +1,9 @@
 module Codebreaker
   class Game
     attr_accessor :code
-    attr_reader  :progress, :player_answer
+    attr_reader :progress, :player_answer
 
-    def initialize (settings)
+    def initialize(settings)
       @progress = []
       @player_answer = []
       @count_attempt = settings[:count_attempt]
@@ -26,28 +26,28 @@ module Codebreaker
 
     def check_code(user_code)
       code = @code
-      regexp = Regexp.new('(['+code+'])')
+      regexp = Regexp.new('([' + code + '])')
       number_of_coincidences = user_code.scan(regexp).length
       char_position = 0
       number_of_plus = 0
       user_code.each_char do |char|
-        number_of_plus +=1 if code[char_position] == char
-        char_position +=1
+        number_of_plus += 1 if code[char_position] == char
+        char_position += 1
       end
       number_of_minus = number_of_coincidences - number_of_plus
       '+' * number_of_plus + '-' * number_of_minus
     end
 
-    def valid_input? numbers
+    def valid_input?(numbers)
       case numbers
-        when /^[1-6]{4}$/
-          return true
+      when /^[1-6]{4}$/
+        return true
       end
       false
     end
 
     def to_s
-      "You guessed this code:  #{@code}. You results: #{@progress.join(" ")}. You have #{@count_attempt} attempts"
+      "You guessed this code:  #{@code}. You results: #{@progress.join(' ')}. You have #{@count_attempt} attempts"
     end
   end
 end
