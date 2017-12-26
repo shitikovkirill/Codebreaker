@@ -3,7 +3,7 @@
 It is task from curses [Ruby & Ruby on Rails course from RubyGarage](http://rubygarage.github.io/)
 
 ### A task
-[Linck](http://rubygarage.github.io/slides/metaprogramming#/22)
+[Linck](http://rubygarage.github.io/slides/rspec#/38)
 
 ## Installation
 
