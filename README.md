@@ -1,8 +1,9 @@
 # Codebreaker
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/Codebreaker`. To experiment with that code, run `bin/console` for an interactive prompt.
+It is task from curses [Ruby & Ruby on Rails course from RubyGarage](http://rubygarage.github.io/)
 
-TODO: Delete this and the text above, and describe your gem
+### A task
+[Linck](http://rubygarage.github.io/slides/metaprogramming#/22)
 
 ## Installation
 
