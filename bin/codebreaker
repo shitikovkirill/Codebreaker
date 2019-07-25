@@ -1,7 +1,0 @@
-#!/usr/bin/env ruby
-
-require 'Codebreaker'
-require 'Codemaker'
-
-application = Codebreaker::Application.new
-application.run

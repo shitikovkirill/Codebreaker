@@ -1,11 +1,3 @@
-/.bundle/
-/.yardoc
-/Gemfile.lock
-/_yardoc/
-/coverage/
-/doc/
-/pkg/
-/spec/reports/
-/tmp/
-.idea
-/data_file_yaml.yaml
+.env
+cdk.out
+app_synck/app_synck.egg-info
