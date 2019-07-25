@@ -2,7 +2,7 @@
 
 from aws_cdk import core
 
-from app_synck.app_synck_stack import AppSynckStack
+from app_sync.app_synck_stack import AppSynckStack
 
 
 app = core.App()

@@ -6,7 +6,7 @@ with open("README.md") as fp:
 
 
 setuptools.setup(
-    name="app_synck",
+    name="app_sync",
     version="0.0.1",
 
     description="An empty CDK Python app",
@@ -15,8 +15,8 @@ setuptools.setup(
 
     author="author",
 
-    package_dir={"": "app_synck"},
-    packages=setuptools.find_packages(where="app_synck"),
+    package_dir={"": "app_sync"},
+    packages=setuptools.find_packages(where="app_sync"),
 
     install_requires=[
         "aws-cdk.core",
