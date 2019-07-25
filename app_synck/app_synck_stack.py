@@ -77,7 +77,7 @@ class AppSynckStack(core.Stack):
         )
 
         items_table_role.add_managed_policy(
-            ManagedPolicy.from_aws_managed_policy_name('arn:aws:iam::aws:policy/AmazonDynamoDBFullAccess')
+            ManagedPolicy.from_aws_managed_policy_name('AmazonDynamoDBFullAccess')
         )
 
         data_source = CfnDataSource(
